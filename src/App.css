@@ -1,0 +1,422 @@
+/* ==========================================================================
+   1. Typography & #4f46e5 Theme Core Canvas Config
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #4f46e5; /* Core theme integration */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Master Layout Canvas - Implements full Indigo Canvas with depth scaling */
+.app-root {
+  width: 100%;
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #4f46e5 0%, #3b31c4 100%); /* Smooth, rich Indigo gradient transition */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.app-container {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+/* ==========================================================================
+   2. Clean White Header Framework over Indigo Canvas
+   ========================================================================== */
+.global-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  align-self: flex-start;
+}
+
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  padding: 6px;
+  background: #ffffff; /* Sits sharply on top of the deep indigo background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  place-items: center;
+}
+
+.brand-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.brand-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e0e7ff; /* Soft pastel lavender white tint for premium tone harmony */
+  margin-top: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ==========================================================================
+   3. Symmetrical Layout Grid Architecture
+   ========================================================================== */
+.app-content {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ==========================================================================
+   4. Left Panel - High Contrast Ultra-Crisp White Login Card
+   ========================================================================== */
+.left-panel {
+  width: 100%;
+}
+
+.login-card {
+  width: 100%;
+  background: #ffffff; 
+  padding: 44px;
+  border-radius: 24px;
+  box-shadow: 
+    0 40px 90px rgba(15, 12, 60, 0.45), /* Rich deep-tinted dropshadow */
+    0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.login-title-row h2 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-pill {
+  display: inline-flex;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid #e0e7ff;
+}
+
+/* Segment Controller Layout */
+.role-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 28px;
+  border: 1px solid #e2e8f0;
+}
+
+.role-switch button {
+  border: none;
+  background: transparent;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.role-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.role-switch button.active-role {
+  background: #ffffff;
+  color: #4f46e5; /* Locks role state to theme color */
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+  font-weight: 700;
+}
+
+/* Inputs Configuration */
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #334155;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  height: 52px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #94a3b8;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+/* High Contrast CTA Action Button */
+.login-btn {
+  width: 100%;
+  height: 52px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  background: #0f172a; /* Ink Dark Blue/Black button creates elite structural anchor inside the card */
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  background: #1e293b;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
+}
+
+/* ==========================================================================
+   Right Panel Design Suite - Typography Fixes
+   ========================================================================== */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px; /* Aligns horizontally flush with the login card title */
+}
+
+.hero-section {
+  margin-bottom: 44px; /* Added breathing room below copy block */
+}
+
+.hero-highlight {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 44px; /* Reduced from 54px to remove the clunky look */
+  font-weight: 700; /* Balanced weight down from extra bold chunkiness */
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em; /* Cleaner heading spacing */
+  color: #ffffff;
+}
+
+.hero-description {
+  max-width: 520px;
+  line-height: 1.65; /* Elegant vertical pacing for high scannability */
+  color: #cbd5e1; /* Smooth grey-lavender white tint to eliminate harsh glare */
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Symmetrical Information Matrix Cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.feature-icon {
+  font-size: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. Seamless Ambient White Footer Row
+   ========================================================================== */
+.app-footer {
+  width: 100%;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copy {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   7. Sane Media Viewport Breakthrough Controls
+   ========================================================================== */
+@media (max-width: 1150px) {
+  .app-content {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .global-header {
+    align-self: center;
+  }
+
+  .right-panel {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-description {
+    margin: 0 auto;
+  }
+
+  .footer-copy {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-card {
+    padding: 32px 20px;
+  }
+}
