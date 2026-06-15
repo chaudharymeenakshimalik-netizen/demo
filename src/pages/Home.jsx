@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import {
-  BarChart3, Users, Clock, DollarSign, CheckCircle2, MapPin,
+  Users, Clock, DollarSign, CheckCircle2, MapPin,
   TrendingUp, Calendar, Shield, Bell, ArrowRight, ChevronRight,
 } from 'lucide-react';
 import EmployeeLoginDialog from '../components/EmployeeLoginDialog.jsx';
 import AdminLoginDialog from '../components/AdminLoginDialog.jsx';
+import jantekLogo from '../assets/img.png';
 
 const stats = [
   { icon: Users, value: '2,847', label: 'Active Employees', delta: '+12%' },
@@ -38,7 +39,7 @@ const ctas = [
     iconClass: 'bg-blue-500/10 text-blue-400',
     check: 'text-emerald-400',
     btnClass: 'bg-blue-500 hover:bg-blue-600',
-    btnLabel: 'Employee Login',
+    btnLabel: 'Warriors',
   },
   {
     icon: Shield,
@@ -64,8 +65,8 @@ export default function Home() {
       <nav className="border-b border-white/[0.06]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2.5">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-linear-to-br from-blue-500 to-blue-600">
-              <BarChart3 size={18} className="text-white" />
+            <div className="grid h-10 w-10 place-items-center overflow-hidden rounded-lg bg-white p-1">
+              <img src={jantekLogo} alt="Jantek logo" className="h-full w-full scale-125 object-contain" />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-lg font-bold text-white">Jantek <span className="text-[#4d7cff]">HRMS</span></span>
@@ -74,7 +75,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-3">
-            <button onClick={() => setDialog('employee')} className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10">Employee Login</button>
+            <button onClick={() => setDialog('employee')} className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10">Warriors</button>
             <button onClick={() => setDialog('admin')} className="rounded-lg bg-linear-to-r from-violet-500 to-purple-600 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-95">Admin Login</button>
           </div>
         </div>
@@ -88,7 +89,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-20 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 font-mono text-xs tracking-wider text-blue-300">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            SYSTEM ONLINE — v4.2.1
+            ENTERPRISE HR, REIMAGINED
           </span>
 
           <h1 className="mx-auto mt-8 max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -103,7 +104,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <button onClick={() => setDialog('employee')} className="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-500/25 transition-colors hover:bg-blue-600">
-              <Users size={18} /> Employee Login <ArrowRight size={18} />
+              <Users size={18} /> Warriors <ArrowRight size={18} />
             </button>
             <button onClick={() => setDialog('admin')} className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-white/10">
               <Shield size={18} /> Admin Portal
@@ -191,8 +192,8 @@ export default function Home() {
       <footer className="border-t border-white/[0.06]">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="grid h-8 w-8 place-items-center rounded-lg bg-linear-to-br from-blue-500 to-blue-600">
-              <BarChart3 size={16} className="text-white" />
+            <div className="grid h-8 w-8 place-items-center overflow-hidden rounded-lg bg-white p-0.5">
+              <img src={jantekLogo} alt="Jantek logo" className="h-full w-full scale-125 object-contain" />
             </div>
             <span className="text-sm font-bold text-white">Jantek <span className="text-[#4d7cff]">HRMS</span></span>
             <span className="text-sm text-slate-500">&copy; 2026</span>
